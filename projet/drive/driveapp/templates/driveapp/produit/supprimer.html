@@ -1,0 +1,10 @@
+{% extends 'driveapp/base.html' %}
+{% block title %}Supprimer le Produit{% endblock %}
+{% block content %}
+<h2>Supprimer le produit : {{ produit.nom }} ?</h2>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-danger">Confirmer</button>
+    <a href="{% url 'liste_produits' %}" class="btn btn-secondary">Annuler</a>
+</form>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'driveapp/base.html' %}
+{% block title %}Formulaire Produit{% endblock %}
+{% block content %}
+<h2>{% if form.instance.pk %}Modifier{% else %}Ajouter{% endif %} un produit</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Valider</button>
+    <a href="{% url 'liste_produits' %}" class="btn btn-secondary">Annuler</a>
+</form>
+{% endblock %}

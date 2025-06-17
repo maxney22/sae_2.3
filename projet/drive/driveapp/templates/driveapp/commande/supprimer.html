@@ -1,0 +1,10 @@
+{% extends 'driveapp/base.html' %}
+{% block title %}Supprimer la Commande{% endblock %}
+{% block content %}
+<h2>Supprimer la commande du {{ commande.date }} pour {{ commande.id_client.nom }} {{ commande.id_client.prenom }} ?</h2>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-danger">Confirmer</button>
+    <a href="{% url 'liste_commandes' %}" class="btn btn-secondary">Annuler</a>
+</form>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'driveapp/base.html' %}
+{% block title %}Supprimer un Produit de la Commande{% endblock %}
+
+{% block content %}
+  <h2>Supprimer le produit "{{ ligne.id_produit.nom }}" de la commande #{{ ligne.id_commande.id }} ?</h2>
+  <p><strong>Quantité :</strong> {{ ligne.quantite }}</p>
+
+  <form method="post">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-danger">Confirmer la suppression</button>
+    <a href="{% url 'detail_commande' ligne.id_commande.id %}" class="btn btn-secondary">Annuler</a>
+  </form>
+{% endblock %}

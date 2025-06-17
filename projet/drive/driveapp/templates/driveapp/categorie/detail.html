@@ -1,0 +1,19 @@
+{% extends 'driveapp/base.html' %}
+{% block title %}Détail Catégorie{% endblock %}
+{% block content %}
+<h2>{{ categorie.nom }}</h2>
+<p>{{ categorie.descriptif }}</p>
+<h4>Produits associés :</h4>
+<ul>
+    {% for produit in produits %}
+        <li>{{ produit.nom }}</li>
+    {% empty %}
+        <li>Aucun produit.</li>
+    {% endfor %}
+</ul>
+<a href="{% url 'modifier_categorie' categorie.pk %}" class="btn btn-warning">Modifier</a>
+<form action="{% url 'supprimer_categorie' categorie.pk %}" method="post" style="display:inline;">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-danger">Supprimer</button>
+</form>
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends 'driveapp/base.html' %}
+{% block title %}{% if mode == 'creation' %}Créer{% else %}Modifier{% endif %} une commande{% endblock %}
+
+{% block content %}
+<h2>{% if mode == 'creation' %}Nouvelle{% else %}Modification de{% endif %} commande</h2>
+
+<form method="post">
+    {% csrf_token %}
+
+    <h4>Détails de la commande</h4>
+    {{ form.as_p }}
+
+    <h4>Produits de la commande</h4>
+    {{ formset.management_form }}
+    {% for form in formset %}
+        <div class="produit-form" style="border: 1px solid #ccc; padding: 10px; margin-bottom: 10px;">
+            {# Champs cachés nécessaires mais invisibles #}
+            {{ form.id }}
+            {{ form.id_commande }}
+
+            {# Affiche uniquement les champs souhaités #}
+            <div class="form-group">
+                {{ form.id_produit.label_tag }}
+                {{ form.id_produit }}
+            </div>
+            <div class="form-group">
+                {{ form.quantite.label_tag }}
+                {{ form.quantite }}
+            </div>
+
+            {# Affiche DELETE seulement en modification #}
+            {% if mode == 'modification' and form.DELETE %}
+                <div class="form-group">
+                    {{ form.DELETE.label_tag }}
+                    {{ form.DELETE }}
+                </div>
+            {% endif %}
+        </div>
+    {% endfor %}
+
+    <button type="submit" class="btn btn-primary">
+        {% if mode == 'creation' %}Créer{% else %}Mettre à jour{% endif %}
+    </button>
+    <a href="{% url 'liste_commandes' %}" class="btn btn-secondary">Annuler</a>
+</form>
+{% endblock %}

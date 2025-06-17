@@ -1,0 +1,21 @@
+{% extends 'driveapp/base.html' %}
+
+{% block title %}Importer des Produits{% endblock %}
+{% block content %}
+<h2>Importer des produits via un fichier CSV</h2>
+
+<p>Le fichier CSV doit contenir les colonnes suivantes : <code>nom,date_peremption,photo,marque,prix,categorie</code></p>
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" name="fichier_csv" required>
+    <button type="submit" class="btn btn-primary">Importer</button>
+</form>
+
+{% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+    {% endfor %}
+{% endif %}
+
+{% endblock %}

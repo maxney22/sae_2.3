@@ -1,0 +1,28 @@
+{% extends 'driveapp/base.html' %}
+{% block title %}Liste des Commandes{% endblock %}
+{% block content %}
+<h2>Liste des commandes</h2>
+<a href="{% url 'ajouter_commande' %}" class="btn btn-success mb-2">Ajouter une commande</a>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th style="width: 45%">Client (et n° de commande)</th>  <!-- Colonne élargie -->
+            <th style="width: 30%">Date</th>    <!-- Colonne recentrée -->
+            <th style="width: 25%">Actions</th> <!-- Colonne ajustée -->
+        </tr>
+    </thead>
+    <tbody>
+        {% for commande in commandes %}
+        <tr>
+            <td>{{ commande.id_client.nom }} {{ commande.id_client.prenom }} <span class="text-muted">(n°{{ commande.numero_commande }})</span></td>
+            <td>{{ commande.date }}</td>  <!-- Centrage du texte -->
+            <td>
+                <a href="{% url 'detail_commande' commande.pk %}" class="btn btn-info btn-sm">Détails</a>
+            </td>
+        </tr>
+        {% empty %}
+        <tr><td colspan="3">Aucune commande trouvée.</td></tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

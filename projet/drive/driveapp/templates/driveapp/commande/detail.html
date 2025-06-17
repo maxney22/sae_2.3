@@ -1,0 +1,38 @@
+{% extends 'driveapp/base.html' %}
+{% block title %}Détail de la commande{% endblock %}
+{% block content %}
+<h2>Détail de la commande n°{{ commande.numero_commande }}</h2>
+<p><strong>Client :</strong> {{ commande.id_client.nom }} {{ commande.id_client.prenom }}</p>
+<p><strong>Date :</strong> {{ commande.date }}</p>
+
+<h3>Produits commandés :</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Produit</th>
+            <th>Quantité</th>
+            <th>Prix unitaire</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for ligne in lignes %}
+        <tr>
+            <td>{{ ligne.id_produit.nom }}</td>
+            <td>{{ ligne.quantite }}</td>
+            <td>{{ ligne.id_produit.prix }} €</td>
+            <td>{{ ligne.quantite }} × {{ ligne.id_produit.prix }} € = {{ ligne.sous_total|floatformat:2 }} €</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<p><strong>Total commande :</strong> {{ total }} €</p>
+
+<a href="{% url 'modifier_commande' commande.pk %}" class="btn btn-warning">Modifier</a>
+<form method="post" action="{% url 'supprimer_commande' commande.pk %}" style="display:inline;">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-danger">Supprimer</button>
+</form>
+<a href="{% url 'exporter_commande_txt' commande.pk %}" class="btn btn-success">Exporter en .txt</a>
+{% endblock %}

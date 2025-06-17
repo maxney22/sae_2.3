@@ -1,0 +1,11 @@
+{% extends 'driveapp/base.html' %}
+{% block title %}Ajouter Produit à la Commande{% endblock %}
+{% block content %}
+<h2>Ajouter un produit à la commande #{{ commande.id }}</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Ajouter</button>
+    <a href="{% url 'detail_commande' commande.id %}" class="btn btn-secondary">Retour</a>
+</form>
+{% endblock %}

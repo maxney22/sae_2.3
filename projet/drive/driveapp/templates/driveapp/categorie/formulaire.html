@@ -1,0 +1,10 @@
+{% extends 'driveapp/base.html' %}
+{% block title %}Formulaire Catégorie{% endblock %}
+{% block content %}
+<h2>Formulaire Catégorie</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Valider</button>
+</form>
+{% endblock %}

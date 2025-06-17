@@ -1,0 +1,28 @@
+{% extends 'driveapp/base.html' %}
+{% block title %}{% if form.instance.pk %}Modifier{% else %}Ajouter{% endif %} un client{% endblock %}
+
+{% block content %}
+<h2>{% if form.instance.pk %}Modifier{% else %}Ajouter{% endif %} un client</h2>
+
+<form method="post">
+    {% csrf_token %}
+    <div class="form-group">
+        {{ form.nom.label_tag }}
+        {{ form.nom }}
+    </div>
+    <div class="form-group">
+        {{ form.prenom.label_tag }}
+        {{ form.prenom }}
+    </div>
+    <div class="form-group">
+        {{ form.date_inscription.label_tag }}
+        {{ form.date_inscription }}
+    </div>
+    <div class="form-group">
+        {{ form.adresse.label_tag }}
+        {{ form.adresse }}
+    </div>
+    <button type="submit" class="btn btn-primary">Enregistrer</button>
+    <a href="{% url 'liste_clients' %}" class="btn btn-secondary">Annuler</a>
+</form>
+{% endblock %}

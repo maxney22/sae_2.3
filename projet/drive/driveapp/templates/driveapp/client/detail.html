@@ -1,0 +1,13 @@
+{% extends 'driveapp/base.html' %}
+{% block title %}Détail du Client{% endblock %}
+{% block content %}
+<h2>{{ client.nom }} {{ client.prenom }}</h2>
+<p><strong>Date d'inscription :</strong> {{ client.date_inscription }}</p>
+<p><strong>Adresse :</strong> {{ client.adresse }}</p>
+
+<a href="{% url 'modifier_client' client.pk %}" class="btn btn-warning">Modifier</a>
+<form action="{% url 'supprimer_client' client.pk %}" method="post" style="display:inline;">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-danger">Supprimer</button>
+</form>
+{% endblock %}
