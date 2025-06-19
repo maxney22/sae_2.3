@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="SAE 23" company="" webLink="http://" view-date="2025-06-02" view-index="0" gantt-divider-location="351" resource-divider-location="300" version="3.3.3316" locale="fr_FR">
+    <description/>
+    <view zooming-state="default:4" id="gantt-chart">
+        <field id="tpd3" name="Nom" width="200" order="0"/>
+        <field id="tpd4" name="Date de début" width="75" order="1"/>
+        <field id="tpd5" name="Date de fin" width="75" order="2"/>
+        <field id="tpd15" name="Notes" width="20" order="3"/>
+        <option id="filter.completedTasks" value="false"/>
+        <option id="filter.dueTodayTasks" value="false"/>
+        <option id="filter.overdueTasks" value="false"/>
+        <option id="filter.inProgressTodayTasks" value="false"/>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Nom" width="199" order="0"/>
+        <field id="1" name="Rôle par défaut" width="82" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="0" uid="d2608140c2964350ab8ceae0aa2c1fdb" name="Groupe 14 : Drive" meeting="false" start="2025-06-05" duration="10" complete="0" expand="true">
+            <depend id="10" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="2" uid="767dabbc643747568fec614757e7e158" name="Tâche du 05/06" meeting="false" start="2025-06-05" duration="1" complete="0" expand="true"/>
+        <task id="1" uid="f890c84c84dd4721851eb6bd1ba50b96" name="Diagramme de Gantt" meeting="false" start="2025-06-05" duration="1" complete="0" expand="true"/>
+        <task id="5" uid="2032542f30b44018b767ebd1358a09e5" name="Schéma relationnel Base de données" meeting="false" start="2025-06-05" duration="1" complete="0" expand="true"/>
+        <task id="4" uid="b3ea4be3510848b4a24b72f353630ee9" name="Mise en place de GitHUB" meeting="false" start="2025-06-05" duration="1" complete="0" expand="true"/>
+        <task id="6" uid="1e4dcba6235c48e78205832cb1d65a1a" name="Début de Django" meeting="false" start="2025-06-05" duration="1" complete="0" expand="true"/>
+        <task id="7" uid="3de013316654460084eedc75c9ba0741" name="tâche du 06/06" meeting="false" start="2025-06-06" duration="1" complete="0" expand="true"/>
+        <task id="9" uid="4a94ab71ec4a426fa99d372ba0b8dbcb" name="Mise en place des CRUD" meeting="false" start="2025-06-06" duration="1" complete="0" expand="true"/>
+        <task id="10" uid="b4f2e32692694d50865b559611484b70" name="Création de la première version de la page web" meeting="false" start="2025-06-19" duration="1" complete="0" expand="true"/>
+        <task id="11" uid="4367f01a466249e2a97fdd5ef8dfeba2" name="Programmation CSS" meeting="false" start="2025-06-06" duration="1" complete="0" expand="true"/>
+        <task id="13" uid="aebce7d6daba40ef8f2054ef6af3e1f6" name="Affectation des bonnes routes pour le site web." meeting="false" start="2025-06-06" duration="1" complete="0" expand="true"/>
+        <task id="16" uid="35c8248c2f8e4120a7d6aefdfa849731" name="Tâche du 10/06 au 12/06" meeting="false" start="2025-06-10" duration="3" complete="0" expand="true"/>
+        <task id="17" uid="4bf237a3e4d648d18df8c17616cf2fd7" name="Programmation MySQL" meeting="false" start="2025-06-10" duration="3" complete="0" expand="true"/>
+        <task id="18" uid="c7af2ac5feec4b4bb3d53324ecdb369f" name="Création des VM" meeting="false" start="2025-06-10" duration="3" complete="0" expand="true"/>
+        <task id="19" uid="ef83bc65012d41459be5122a6964cba9" name="Connecter la base de données SQL au CRUD" meeting="false" start="2025-06-10" duration="3" complete="0" expand="true"/>
+        <task id="23" uid="a8bef1c9378e4f78b3825f9fb6500689" name="tâche du 16/06" meeting="false" start="2025-06-16" duration="1" complete="0" expand="true"/>
+        <task id="24" uid="a5956a9018d14881a861f8e5cc930bd3" name="Mise en ligne du site avec apache2" meeting="false" start="2025-06-16" duration="1" complete="0" expand="true"/>
+        <task id="25" uid="b1387820082a4fde83ff169f855514e1" name="dernière vérification de l'application" meeting="false" start="2025-06-16" duration="1" complete="0" expand="true"/>
+        <task id="26" uid="c5acef3b3f414f9b9c7fa2cb72778102" name="tâche du 19/06" meeting="false" start="2025-06-19" duration="1" complete="0" expand="true"/>
+        <task id="27" uid="04f3aaf33447489d9d2afe54883dc202" name="Présentation du projet" meeting="false" start="2025-06-19" duration="1" complete="0" expand="true"/>
+        <task id="28" uid="31362c64b26846a490438d41fa5661f9" name="Fiche de projet Portfolio" meeting="false" start="2025-06-19" duration="1" complete="0" expand="true"/>
+        <task id="29" uid="fffd00cc214a438e9b2e1f8d0d8809b3" name="écriture de la procédure d'installation et de déploiement" meeting="false" start="2025-06-19" duration="1" complete="0" expand="true"/>
+    </tasks>
+    <resources>
+        <resource id="0" name="Maxime Ney" function="Default:0" contacts="" phone=""/>
+        <resource id="1" name="Corentin Friedmann" function="Default:0" contacts="" phone=""/>
+        <resource id="2" name="Keran-Lynch Noumba" function="Default:0" contacts="" phone=""/>
+    </resources>
+    <allocations>
+        <allocation task-id="0" resource-id="0" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="1" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="5" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="17" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="24" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="25" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="27" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="28" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="29" resource-id="0" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="9" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="0" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="6" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="10" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="19" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="24" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="25" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="27" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="28" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="11" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="0" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="4" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="13" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="18" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="24" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="27" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="28" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="25" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+    </allocations>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+</project>
