@@ -1,16 +1,12 @@
-
--- Base de données
 CREATE DATABASE IF NOT EXISTS sae24db CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE sae24db;
 
--- Table : Catégorie de produit
 CREATE TABLE CategorieProduit (
     id_categorie_produit INT PRIMARY KEY AUTO_INCREMENT,
     nom VARCHAR(100) NOT NULL,
     descriptif TEXT
 );
 
--- Table : Produit
 CREATE TABLE Produit (
     id_produits INT PRIMARY KEY AUTO_INCREMENT,
     nom VARCHAR(100) NOT NULL,
@@ -23,7 +19,6 @@ CREATE TABLE Produit (
         ON DELETE SET NULL ON UPDATE CASCADE
 );
 
--- Table : Client
 CREATE TABLE Client (
     id_clients INT PRIMARY KEY AUTO_INCREMENT,
     nom VARCHAR(100) NOT NULL,
@@ -32,7 +27,6 @@ CREATE TABLE Client (
     adresse TEXT
 );
 
--- Table : Commande
 CREATE TABLE Commande (
     id_commandes INT PRIMARY KEY AUTO_INCREMENT,
     numero_commande VARCHAR(50) NOT NULL,
@@ -42,7 +36,7 @@ CREATE TABLE Commande (
         ON DELETE SET NULL ON UPDATE CASCADE
 );
 
--- Table : Ligne de commande (CommandeProduit)
+
 CREATE TABLE CommandeProduit (
     id INT PRIMARY KEY AUTO_INCREMENT,
     id_commande INT,
